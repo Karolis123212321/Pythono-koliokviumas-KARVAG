@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <title>Welcome to Task Manager</title>
+    <title>Task manageris</title>
 </head>
 <body>
     <div class="main-container">
-        <h1 class="main-heading">Welcome to the Task Manager</h1>
+        <h1 class="main-heading">Sveiki atvykę į task managerį</h1>
         {% if current_user %}
-            <p>Welcome, {{ current_user }}!</p>
-            <a href="/tasks" class="nav-btn">Manage Tasks</a>
-            <a href="/logout" class="nav-btn">Logout</a>
+            <p>Labas, {{ current_user }}!</p>
+            <a href="/tasks" class="nav-btn">Peržiūrėti taskus</a>
+            <a href="/logout" class="nav-btn">Atsijungti</a>
         {% else %}
             <div class="navigation">
-                <a href="/login" class="nav-btn">Login</a>
-                <a href="/register" class="nav-btn">Register</a>
+                <a href="/login" class="nav-btn">Prisijungti</a>
+                <a href="/register" class="nav-btn">Registruotis</a>
             </div>
         {% endif %}
     </div>

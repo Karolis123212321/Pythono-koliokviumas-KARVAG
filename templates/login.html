@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Prisijungti</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <div class="main-container">
-        <h1>Login to Manage Tasks</h1>
+        <h1>Prisijunkite, jei norite valdyti taskus</h1>
         <div class="user-form">
             <form method="POST">
                 <input type="text" name="username" placeholder="Username" required>
                 <input type="password" name="password" placeholder="Password" required>
                 <button type="submit">Login</button>
+                <a href="/">Sugrįžti į pradinį</a>
             </form>
         </div>
-        <a href="/register">Need an account? Register</a>
+        <a href="/register">Neturite paskyros - registruokitės</a>
     </div>
 </body>
 </html>
