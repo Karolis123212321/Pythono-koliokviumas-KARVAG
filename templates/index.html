@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <h1 class="main-heading">Sveiki atvykę į darbų sąrašą {{ current_user }}</h1>
+        <div class="user-form">
+            <form action="/setuser" method="POST">
+                <input type="text" name="username" placeholder="Įveskite savo vardą" class="username-input">
+                <button type="submit" class="set-user-btn">Nustatyti vartotoją</button>
+            </form>
+        </div>
+        <div class="navigation">
+            <a href="/tasks" class="nav-btn">Užduočių valdymas</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Užduočių sąrašas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        form { margin-bottom: 20px; }
+        input, button { padding: 10px; }
+        button { cursor: pointer; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <h1>Įveskite naują užduotį</h1>
+    <form action="/tasks" method="POST">
+        <input type="text" name="title" required placeholder="Pavadinimas">
+        <input type="text" name="description" required placeholder="Apibūdinimas">
+        <button type="submit">Pridėti užduotį</button>
+    </form>
+    <h2>Užduočių sąrašas:</h2>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                {{ task.title }} - {{ task.description }} ({{ task.status }})
+                <a href="/edit_task/{{ task.id }}">Redaguoti</a>
+                <a href="/delete_task/{{ task.id }}">Ištrinti</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

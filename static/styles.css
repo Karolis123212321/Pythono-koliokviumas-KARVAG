@@ -1,0 +1,131 @@
+/* Base styles for body and layout */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Main container for center alignment and spacing */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px; /* Adjusted for better spacing */
+}
+
+.main-heading {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Styling for forms and inputs */
+.user-form, form {
+    margin-bottom: 20px;
+}
+
+input[type="text"], textarea, .username-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Navigation and action buttons */
+button, input[type="submit"], .main-page-button, .nav-btn {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+button:hover, input[type="submit"]:hover, .main-page-button:hover, .nav-btn:hover {
+    background-color: #2980b9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Styling for links */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* List styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #ecf0f1;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    text-align: left; /* Adjust text alignment for better readability */
+}
+
+/* Navigation container */
+.navigation {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-btn, .username-input, .set-user-btn {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.nav-btn {
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+/* Main page button adjustments */
+.main-page-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #45a049; /* Updated background color for better distinction */
+}
+
+.main-page-button:hover {
+    background-color: #39803e;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-container, .navigation {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .main-page-button {
+        position: static;
+        margin-bottom: 10px;
+    }
+}
