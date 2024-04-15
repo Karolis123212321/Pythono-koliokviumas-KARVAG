@@ -1,6 +1,7 @@
 CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL UNIQUE
+    username TEXT NOT NULL UNIQUE,
+    password_hash TEXT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS tasks (
@@ -8,6 +9,6 @@ CREATE TABLE IF NOT EXISTS tasks (
     title TEXT NOT NULL,
     description TEXT NOT NULL,
     status TEXT CHECK( status IN ('Atlikta', 'Neatlikta', 'Nukelta') ) NOT NULL DEFAULT 'Neatlikta',
-    user_name TEXT NOT NULL,
-    FOREIGN KEY (user_name) REFERENCES users(name)
+    user_id INTEGER NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id)
 );
