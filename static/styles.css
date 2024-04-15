@@ -129,3 +129,63 @@ li {
         margin-bottom: 10px;
     }
 }
+
+/* Styles for registration and login forms */
+.form-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto;
+}
+
+.form-container h1 {
+    margin-bottom: 24px;
+    font-size: 24px;
+    color: #333;
+}
+
+.form-container input[type='text'],
+.form-container input[type='password'] {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in the element's width */
+}
+
+.form-container input[type='submit'] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #3498db;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-container input[type='submit']:hover {
+    background-color: #2980b9;
+}
+
+.form-container a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #3498db;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+
+/* Make sure the form container fits well on smaller screens */
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+        padding: 30px;
+    }
+}
